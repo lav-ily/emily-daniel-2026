@@ -1,0 +1,69 @@
+import Image from "next/image";
+import styles from "./page.module.css";
+
+const NAV_ITEMS = [
+  "travel",
+  "accommodations",
+  "itinerary",
+  "faq",
+  "gallery",
+  "registry",
+] as const;
+
+export default function Home() {
+  return (
+    <main className={styles.home}>
+      <div className={styles.background}>
+        <Image
+          src="/images/grass.png"
+          alt="Lush green grass field"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+
+      <div className={styles.textureOverlay}>
+        <Image
+          src="/images/paper-texture.png"
+          alt=""
+          fill
+          sizes="100vw"
+          aria-hidden="true"
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+
+      <div className={styles.heroContent}>
+        <Image
+          src="/images/bunnies.png"
+          alt="Two bunnies — one black, one white — representing Emily and Daniel"
+          width={301}
+          height={301}
+          className={styles.bunnies}
+          priority
+        />
+        <h1 className={styles.title}>Emily &amp; Daniel</h1>
+        <p className={styles.date}>05 September 2026</p>
+      </div>
+
+      <nav className={styles.nav}>
+        <div className={styles.navInner}>
+          <ul className={styles.navLinks}>
+            {NAV_ITEMS.map((item) => (
+              <li key={item}>
+                <a href={`#${item}`} className={styles.navLink}>
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a href="#rsvp" className={styles.rsvpButton}>
+            rsvp
+          </a>
+        </div>
+      </nav>
+    </main>
+  );
+}

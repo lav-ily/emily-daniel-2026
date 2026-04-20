@@ -152,6 +152,35 @@
   opacity: 0.7;
 }
 
+.accordionBody ul ul {
+  padding-left: 30px;
+  margin-top: 0;
+  gap: 0;
+}
+
+/* ── Detail blocks (When/Where labels) ──────────── */
+
+.detailBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detailLabel {
+  font-family: 'Times New Roman', 'Times', Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #956074;
+  letter-spacing: -1px;
+  line-height: normal;
+}
+
+@media (max-width: 833px) {
+  .detailLabel {
+    font-size: 17px;
+  }
+}
+
 /* ── FAQ-density variant (tighter gap) ──────────── */
 
 .sectionsDense {

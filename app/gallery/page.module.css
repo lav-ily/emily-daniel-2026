@@ -1,0 +1,133 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 77px;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/* ── Shared frame overlay ───────────────────────── */
+
+.frameOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.frameRotated {
+  inset: auto;
+  width: 133.28%;
+  height: 75.03%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* ── Silver horizontal frame (885×664) ──────────── */
+
+.frameSilverH {
+  position: relative;
+  width: 100%;
+  max-width: 885px;
+  aspect-ratio: 885 / 664;
+}
+
+.photoInSilverH {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 76.6%;
+  height: 69.7%;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+/* ── Gold square frame (792×792) ────────────────── */
+
+.frameGoldSquare {
+  position: relative;
+  width: 100%;
+  max-width: 792px;
+  aspect-ratio: 1;
+}
+
+.photoInGoldSquare {
+  position: absolute;
+  top: 14.77%;
+  left: 21.59%;
+  width: 57.58%;
+  height: 69.82%;
+  overflow: hidden;
+}
+
+/* ── Gold oval frame (792×792 container) ────────── */
+
+.frameGoldOval {
+  position: relative;
+  width: 100%;
+  max-width: 792px;
+  aspect-ratio: 1;
+}
+
+.photoInGoldOval {
+  position: absolute;
+  top: 16.54%;
+  left: 22.35%;
+  width: 55.30%;
+  height: 66.79%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* ── Gold oval-2 frame (792×792 container) ──────── */
+
+.frameGoldOval2 {
+  position: relative;
+  width: 100%;
+  max-width: 792px;
+  aspect-ratio: 1;
+}
+
+.photoInGoldOval2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52.90%;
+  height: 76.39%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* ── Silver vertical frame (664×885, rotated) ───── */
+
+.frameSilverV {
+  position: relative;
+  width: 100%;
+  max-width: 664px;
+  aspect-ratio: 664 / 885;
+  overflow: hidden;
+}
+
+.photoInSilverV {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68.83%;
+  height: 75.14%;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 833px) {
+  .gallery {
+    gap: 48px;
+    padding: 24px 0;
+  }
+}

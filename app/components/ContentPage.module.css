@@ -152,6 +152,36 @@
   opacity: 0.7;
 }
 
+/* ── FAQ-density variant (tighter gap) ──────────── */
+
+.sectionsDense {
+  composes: sections;
+  gap: 38px;
+}
+
+/* ── Nested category lists (FAQ suggestions) ────── */
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.categoryList > li {
+  line-height: 28px;
+}
+
+.categoryList ul {
+  padding-left: 30px;
+  gap: 0;
+}
+
+.categoryList ul li {
+  line-height: 28px;
+}
+
 /* ── Town groupings (Accommodations) ────────────── */
 
 .townGroup {

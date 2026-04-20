@@ -135,6 +135,13 @@
   list-style-type: disc;
 }
 
+.accordionBody ol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 30px;
+}
+
 .accordionBody a {
   color: #956074;
   text-decoration: underline;
@@ -143,6 +150,23 @@
 
 .accordionBody a:hover {
   opacity: 0.7;
+}
+
+/* ── Town groupings (Accommodations) ────────────── */
+
+.townGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.townName {
+  font-family: 'Times New Roman', 'Times', Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #956074;
+  letter-spacing: -1px;
+  line-height: normal;
 }
 
 /* ── Responsive ─────────────────────────────────── */
@@ -175,6 +199,10 @@
   }
 
   .accordionTitle {
+    font-size: 17px;
+  }
+
+  .townName {
     font-size: 17px;
   }
 }

@@ -1,59 +1,6 @@
-"use client";
-
-import { useState } from "react";
-import Image from "next/image";
 import Header from "@/app/components/Header";
-import styles from "./page.module.css";
-
-function ChevronIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      width="16"
-      height="9"
-      viewBox="0 0 16 9"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`${styles.chevron} ${open ? styles.chevronOpen : ""}`}
-    >
-      <path
-        d="M0.75 8.25L8 0.75L15.25 8.25"
-        stroke="#956074"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-interface AccordionSectionProps {
-  title: React.ReactNode;
-  children: React.ReactNode;
-  defaultOpen?: boolean;
-}
-
-function AccordionSection({ title, children, defaultOpen = true }: AccordionSectionProps) {
-  const [open, setOpen] = useState(defaultOpen);
-
-  return (
-    <section className={styles.accordion}>
-      <button
-        className={styles.accordionHeader}
-        onClick={() => setOpen(!open)}
-        aria-expanded={open}
-      >
-        <span className={styles.accordionTitle}>{title}</span>
-        <ChevronIcon open={open} />
-      </button>
-
-      <div className={styles.sectionLine}>
-        <Image src="/images/line-section.svg" alt="" fill aria-hidden="true" />
-      </div>
-
-      {open && <div className={styles.accordionBody}>{children}</div>}
-    </section>
-  );
-}
+import AccordionSection from "@/app/components/AccordionSection";
+import styles from "@/app/components/ContentPage.module.css";
 
 export default function TravelPage() {
   return (
@@ -66,8 +13,7 @@ export default function TravelPage() {
           <div className={styles.introText}>
             <p>
               Our wedding will be held at <strong>M&D Farm</strong> in Westerlo,
-              New York on{" "}
-              <strong>Saturday, September 5th, 2026</strong>.
+              New York on <strong>Saturday, September 5th, 2026</strong>.
             </p>
             <p>
               Westerlo is in the Catskills, New York and is easily accessible
@@ -169,11 +115,9 @@ export default function TravelPage() {
               (JFK/LGA/EWR); you will need to arrange for connecting
               transportation into Westerlo. The closest airport to the venue is
               Albany International Airport (ALB),{" "}
-              <strong>
-                which is 42 minutes away from M&D Farms
-              </strong>
-              . We encourage booking ahead of time for the best possible rate due
-              to the holiday weekend!
+              <strong>which is 42 minutes away from M&D Farms</strong>. We
+              encourage booking ahead of time for the best possible rate due to
+              the holiday weekend!
             </p>
           </AccordionSection>
         </div>

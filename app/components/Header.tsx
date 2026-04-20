@@ -38,6 +38,16 @@ export default function Header() {
         </Link>
       </nav>
 
+      <button className={styles.hamburger} aria-label="Open menu">
+        <Image
+          src="/images/hamburger-menu.svg"
+          alt=""
+          width={24}
+          height={24}
+          aria-hidden="true"
+        />
+      </button>
+
       <div className={styles.borderLine}>
         <Image
           src="/images/line-header.svg"

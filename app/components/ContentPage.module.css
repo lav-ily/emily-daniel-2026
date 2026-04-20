@@ -233,7 +233,7 @@
 @media (max-width: 833px) {
   .main {
     padding: 0 24px;
-    padding-top: calc(88px + 48px);
+    padding-top: calc(78px + 40px);
   }
 
   .intro {

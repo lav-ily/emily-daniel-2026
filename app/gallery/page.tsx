@@ -110,17 +110,7 @@ export default function GalleryPage() {
             frameClass={styles.frameOverlay}
           />
 
-          {/* 7: Silver horizontal frame */}
-          <FramedPhoto
-            photo="/images/gallery/photo-1.png"
-            frame="/images/gallery/frame-silver-h.png"
-            alt="Emily and Daniel"
-            containerClass={styles.frameSilverH}
-            photoClass={styles.photoInSilverH}
-            frameClass={styles.frameOverlay}
-          />
-
-          {/* 8: Gold oval-2 frame */}
+          {/* 7: Gold oval-2 frame */}
           <FramedPhoto
             photo="/images/gallery/photo-6.png"
             frame="/images/gallery/frame-gold-oval-2.png"

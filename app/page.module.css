@@ -149,9 +149,21 @@
   opacity: 0.9;
 }
 
+/* ── Hamburger button (hidden on desktop) ───────── */
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
 /* ── Responsive ─────────────────────────────────── */
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 834px) {
   .nav {
     padding: 24px 60px;
   }
@@ -175,60 +187,23 @@
   }
 }
 
-@media (max-width: 900px) {
-  .nav {
-    padding: 20px 24px;
-  }
-
+@media (max-width: 833px) {
   .navInner {
-    flex-wrap: wrap;
-    gap: 16px;
+    display: none;
   }
 
-  .navLinks {
-    flex-wrap: wrap;
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    height: 94px;
+    padding: 28px 168px;
     justify-content: center;
-    gap: 8px;
-  }
-
-  .navLink {
-    padding: 8px 20px 9px;
-    font-size: 16px;
-  }
-
-  .rsvpButton {
-    padding: 8px 28px 9px;
-    font-size: 16px;
   }
 
   .bunnies {
     width: 200px;
     height: 200px;
-  }
-}
-
-@media (max-width: 600px) {
-  .nav {
-    padding: 16px;
-  }
-
-  .navLinks {
-    gap: 4px;
-  }
-
-  .navLink {
-    padding: 8px 16px;
-    font-size: 15px;
-    letter-spacing: -0.5px;
-  }
-
-  .rsvpButton {
-    padding: 8px 24px;
-    font-size: 15px;
-  }
-
-  .bunnies {
-    width: 160px;
-    height: 160px;
   }
 }

@@ -187,6 +187,109 @@
   }
 }
 
+/* ── Mobile menu overlay ─────────────────────────── */
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenuHeader {
+  position: relative;
+  height: 78px;
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenuLogo {
+  position: absolute;
+  left: 26px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+.mobileMenuLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.closeButton {
+  position: absolute;
+  right: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.mobileMenuBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+}
+
+.mobileMenuBorder img {
+  object-fit: cover;
+}
+
+.mobileMenuNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+  padding-top: calc(22.22vh - 78px + 14px);
+}
+
+.mobileMenuLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+}
+
+.mobileMenuLink {
+  font-family: 'Times New Roman', 'Times', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #535f0b;
+  text-align: center;
+  letter-spacing: -1px;
+  line-height: normal;
+  text-decoration: none;
+  padding: 12px 18px 13px;
+  border-radius: 39px;
+  white-space: nowrap;
+}
+
+.mobileMenuRsvp {
+  font-family: 'Times New Roman', 'Times', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #fffcf4;
+  letter-spacing: -1px;
+  line-height: normal;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 22px;
+  white-space: nowrap;
+  background-color: #535f0b;
+  border: 1px solid #535f0b;
+}
+
 @media (max-width: 833px) {
   .navInner {
     display: none;
@@ -205,5 +308,13 @@
   .bunnies {
     width: 200px;
     height: 200px;
+  }
+
+  .mobileMenu {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: #fffcf4;
+    z-index: 20;
   }
 }

@@ -65,9 +65,9 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <Link href="/rsvp" className={styles.rsvpButton}>
+          <a href="https://www.zola.com/wedding/emily-daniel-2026" target="_blank" rel="noopener noreferrer" className={styles.rsvpButton}>
             rsvp
-          </Link>
+          </a>
         </div>
         <button
           className={styles.hamburger}
@@ -132,13 +132,15 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="/rsvp"
+            <a
+              href="https://www.zola.com/wedding/emily-daniel-2026"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.mobileMenuRsvp}
               onClick={() => setMenuOpen(false)}
             >
               rsvp
-            </Link>
+            </a>
           </nav>
         </div>
       )}

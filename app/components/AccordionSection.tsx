@@ -47,11 +47,10 @@ export default function AccordionSection({
       >
         <span className={styles.accordionTitle}>{title}</span>
         <ChevronIcon open={open} />
+        <div className={styles.sectionLine} aria-hidden="true">
+          <Image src="/images/line-section.svg" alt="" fill aria-hidden="true" />
+        </div>
       </button>
-
-      <div className={styles.sectionLine}>
-        <Image src="/images/line-section.svg" alt="" fill aria-hidden="true" />
-      </div>
 
       {open && <div className={styles.accordionBody}>{children}</div>}
     </section>

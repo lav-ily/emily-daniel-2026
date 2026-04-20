@@ -34,7 +34,7 @@ interface AccordionSectionProps {
 export default function AccordionSection({
   title,
   children,
-  defaultOpen = true,
+  defaultOpen = false,
 }: AccordionSectionProps) {
   const [open, setOpen] = useState(defaultOpen);
 

@@ -30,7 +30,7 @@ export default function ItineraryPage() {
             <div className={styles.detailBlock}>
               <p className={styles.detailLabel}>When:</p>
               <ul>
-                <li>6 PM — 9 PM</li>
+                <li>5 PM — 9 PM</li>
               </ul>
             </div>
 
@@ -39,14 +39,14 @@ export default function ItineraryPage() {
               <ul>
                 <li>
                   <a
-                    href="https://www.google.com/maps/dir//Ryan's+Wake,+403+River+St+%23+1,+Troy,+NY+12180"
+                    href="https://www.google.com/maps/dir//Ilium+Brewing+Co,+410+Fulton+St,+Troy,+NY+12180/@40.744528,-73.9934208,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89de0f013d844537:0x7c67a923811cc4b6!2m2!1d-73.6882307!2d42.7324347?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Ryan&apos;s Wake
+                    Ilium Brewing Co.
                   </a>
                   <ul>
-                    <li>03 River St # 1, Troy, NY 12180</li>
+                    <li>410 Fulton St, Troy, NY 12180</li>
                   </ul>
                 </li>
               </ul>

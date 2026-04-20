@@ -1,0 +1,180 @@
+.page {
+  background-color: #fffcf4;
+  min-height: 100vh;
+}
+
+.main {
+  max-width: 1346px;
+  margin: 0 auto;
+  padding: 0 11.11%;
+  padding-top: calc(88px + 11.11vh);
+}
+
+/* ── Intro ──────────────────────────────────────── */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 58px;
+  text-align: center;
+  margin-bottom: 86px;
+}
+
+.pageTitle {
+  font-family: 'NightingaleScript', cursive;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: normal;
+  color: #956074;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Times New Roman', 'Times', Georgia, serif;
+  font-size: 20px;
+  color: #956074;
+  letter-spacing: -1px;
+  line-height: normal;
+  text-align: center;
+}
+
+.introText strong {
+  font-weight: 700;
+}
+
+/* ── Accordion sections ─────────────────────────── */
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 20px;
+  padding-bottom: 26px;
+}
+
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.accordionTitle {
+  flex: 1;
+  font-family: 'Times New Roman', 'Times', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #956074;
+  letter-spacing: -1px;
+  line-height: normal;
+}
+
+.accordionTitle strong {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.chevronOpen {
+  transform: rotate(0deg);
+}
+
+.chevron:not(.chevronOpen) {
+  transform: rotate(180deg);
+}
+
+.sectionLine {
+  position: relative;
+  width: 100%;
+  height: 2px;
+}
+
+.sectionLine img {
+  object-fit: cover;
+}
+
+.accordionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: 'Times New Roman', 'Times', Georgia, serif;
+  font-size: 20px;
+  color: #956074;
+  letter-spacing: -1px;
+  line-height: normal;
+}
+
+.accordionBody strong {
+  font-weight: 700;
+}
+
+.accordionBody ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 30px;
+  list-style-type: disc;
+}
+
+.accordionBody a {
+  color: #956074;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.accordionBody a:hover {
+  opacity: 0.7;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 833px) {
+  .main {
+    padding: 0 24px;
+    padding-top: calc(88px + 48px);
+  }
+
+  .intro {
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+
+  .pageTitle {
+    font-size: 36px;
+  }
+
+  .introText {
+    font-size: 17px;
+  }
+
+  .sections {
+    gap: 32px;
+  }
+
+  .accordionBody {
+    font-size: 17px;
+  }
+
+  .accordionTitle {
+    font-size: 17px;
+  }
+}

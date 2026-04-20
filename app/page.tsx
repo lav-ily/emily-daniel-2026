@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 const NAV_ITEMS = [
-  "travel",
-  "accommodations",
-  "itinerary",
-  "faq",
-  "gallery",
-  "registry",
+  { label: "travel", href: "/travel" },
+  { label: "accommodations", href: "/accommodations" },
+  { label: "itinerary", href: "/itinerary" },
+  { label: "faq", href: "/faq" },
+  { label: "gallery", href: "/gallery" },
+  { label: "registry", href: "/registry" },
 ] as const;
 
 export default function Home() {
@@ -52,16 +53,16 @@ export default function Home() {
         <div className={styles.navInner}>
           <ul className={styles.navLinks}>
             {NAV_ITEMS.map((item) => (
-              <li key={item}>
-                <a href={`#${item}`} className={styles.navLink}>
-                  {item}
-                </a>
+              <li key={item.label}>
+                <Link href={item.href} className={styles.navLink}>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
-          <a href="#rsvp" className={styles.rsvpButton}>
+          <Link href="/rsvp" className={styles.rsvpButton}>
             rsvp
-          </a>
+          </Link>
         </div>
         <button className={styles.hamburger} aria-label="Open menu">
           <Image

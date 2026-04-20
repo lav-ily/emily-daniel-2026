@@ -63,6 +63,15 @@ export default function Home() {
             rsvp
           </a>
         </div>
+        <button className={styles.hamburger} aria-label="Open menu">
+          <Image
+            src="/images/hamburger-menu.svg"
+            alt=""
+            width={24}
+            height={24}
+            aria-hidden="true"
+          />
+        </button>
       </nav>
     </main>
   );

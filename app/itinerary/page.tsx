@@ -62,9 +62,10 @@ export default function ItineraryPage() {
             }
           >
             <div className={styles.detailBlock}>
-              <p className={styles.detailLabel}>When:</p>
+              <p className={styles.detailLabel}>What &amp; When:</p>
               <ul>
-                <li>4:30 PM — 11 PM</li>
+                <li>Ceremony | 5 PM — 6 PM</li>
+                <li>Cocktail Hour &amp; Reception | 6 PM — 11 PM</li>
               </ul>
             </div>
 
@@ -81,42 +82,6 @@ export default function ItineraryPage() {
                   </a>
                   <ul>
                     <li>364 NY-143, Westerlo, NY 12193</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </AccordionSection>
-
-          <AccordionSection
-            title={
-              <>Sunday, September 6th, 2026 &bull; Goodbye Brunch</>
-            }
-          >
-            <p>
-              Debrief on the night&apos;s debauchery over french toast and
-              coffee at this local diner.
-            </p>
-
-            <div className={styles.detailBlock}>
-              <p className={styles.detailLabel}>When:</p>
-              <ul>
-                <li>11 AM — 1 PM</li>
-              </ul>
-            </div>
-
-            <div className={styles.detailBlock}>
-              <p className={styles.detailLabel}>Where:</p>
-              <ul>
-                <li>
-                  <a
-                    href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KWP6JwQhD96JMVurdqf8LPcY&daddr=1809+5th+Ave,+Troy,+NY+12180"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Naughter&apos;s
-                  </a>
-                  <ul>
-                    <li>1809 5th Ave, Troy, NY 12180</li>
                   </ul>
                 </li>
               </ul>

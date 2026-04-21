@@ -10,12 +10,6 @@ export default function FaqPage() {
       <main className={styles.main}>
         <div className={styles.intro}>
           <h1 className={styles.pageTitle}>Frequently Asked Questions</h1>
-          <div className={styles.introText}>
-            <p>
-              Our wedding will be held at <strong>M&D Farm</strong> in Westerlo,
-              New York on <strong>Saturday, September 5th, 2026</strong>.
-            </p>
-          </div>
         </div>
 
         <div className={styles.sectionsDense}>

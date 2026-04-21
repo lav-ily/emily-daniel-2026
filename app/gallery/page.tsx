@@ -41,16 +41,22 @@ export default function GalleryPage() {
         <div className={contentStyles.intro}>
           <h1 className={contentStyles.pageTitle}>Gallery</h1>
           <div className={contentStyles.introText}>
-            <p>
-              Our wedding will be held at <strong>M&D Farm</strong> in Westerlo,
-              New York on <strong>Saturday, September 5th, 2026</strong>.
-            </p>
             <p>Take a walk down memory lane with us!</p>
           </div>
         </div>
 
         <div className={styles.gallery}>
-          {/* 1: Silver horizontal frame */}
+          {/* 1: Gold oval frame — prioritized */}
+          <FramedPhoto
+            photo="/images/gallery/photo-5.png"
+            frame="/images/gallery/frame-gold-oval.png"
+            alt="Emily and Daniel under blue lights"
+            containerClass={styles.frameGoldOval}
+            photoClass={styles.photoInGoldOval}
+            frameClass={styles.frameOverlay}
+          />
+
+          {/* 2: Silver horizontal frame */}
           <FramedPhoto
             photo="/images/gallery/photo-1.png"
             frame="/images/gallery/frame-silver-h.png"
@@ -60,7 +66,7 @@ export default function GalleryPage() {
             frameClass={styles.frameOverlay}
           />
 
-          {/* 2: Gold square frame */}
+          {/* 3: Gold square frame */}
           <FramedPhoto
             photo="/images/gallery/photo-2.png"
             frame="/images/gallery/frame-gold-square.png"
@@ -70,7 +76,7 @@ export default function GalleryPage() {
             frameClass={styles.frameOverlay}
           />
 
-          {/* 3: Gold oval frame */}
+          {/* 4: Gold oval frame */}
           <FramedPhoto
             photo="/images/gallery/photo-3.png"
             frame="/images/gallery/frame-gold-oval.png"
@@ -80,7 +86,7 @@ export default function GalleryPage() {
             frameClass={styles.frameOverlay}
           />
 
-          {/* 4: Silver vertical (rotated) frame */}
+          {/* 5: Silver vertical (rotated) frame */}
           <FramedPhoto
             photo="/images/gallery/photo-4.png"
             frame="/images/gallery/frame-silver-h.png"
@@ -90,27 +96,7 @@ export default function GalleryPage() {
             frameClass={`${styles.frameOverlay} ${styles.frameRotated}`}
           />
 
-          {/* 5: Gold oval frame */}
-          <FramedPhoto
-            photo="/images/gallery/photo-5.png"
-            frame="/images/gallery/frame-gold-oval.png"
-            alt="Emily and Daniel"
-            containerClass={styles.frameGoldOval}
-            photoClass={styles.photoInGoldOval}
-            frameClass={styles.frameOverlay}
-          />
-
-          {/* 6: Gold square frame */}
-          <FramedPhoto
-            photo="/images/gallery/photo-2.png"
-            frame="/images/gallery/frame-gold-square.png"
-            alt="Emily and Daniel"
-            containerClass={styles.frameGoldSquare}
-            photoClass={styles.photoInGoldSquare}
-            frameClass={styles.frameOverlay}
-          />
-
-          {/* 7: Gold oval-2 frame */}
+          {/* 6: Gold oval-2 frame */}
           <FramedPhoto
             photo="/images/gallery/photo-6.png"
             frame="/images/gallery/frame-gold-oval-2.png"
@@ -120,7 +106,7 @@ export default function GalleryPage() {
             frameClass={styles.frameOverlay}
           />
 
-          {/* 9: Silver vertical (rotated) frame */}
+          {/* 7: Silver vertical (rotated) frame */}
           <FramedPhoto
             photo="/images/gallery/photo-7.png"
             frame="/images/gallery/frame-silver-h.png"

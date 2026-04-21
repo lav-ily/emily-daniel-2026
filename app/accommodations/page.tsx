@@ -9,13 +9,7 @@ export default function AccommodationsPage() {
 
       <main className={styles.main}>
         <div className={styles.intro}>
-          <h1 className={styles.pageTitle}>Accommodation</h1>
-          <div className={styles.introText}>
-            <p>
-              Our wedding will be held at <strong>M&D Farm</strong> in Westerlo,
-              New York on <strong>Saturday, September 5th, 2026</strong>.
-            </p>
-          </div>
+          <h1 className={styles.pageTitle}>Accommodations</h1>
         </div>
 
         <div className={styles.sections}>

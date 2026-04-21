@@ -83,11 +83,6 @@
   line-height: normal;
 }
 
-.accordionTitle strong {
-  font-style: italic;
-  font-weight: 700;
-}
-
 .chevron {
   flex-shrink: 0;
   transition: transform 0.3s ease;

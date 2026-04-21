@@ -10,7 +10,7 @@
 .background {
   position: absolute;
   inset: -10px;
-  filter: blur(1px);
+  filter: blur(0.5px);
   overflow: hidden;
 }
 
@@ -65,6 +65,16 @@
 }
 
 .date {
+  font-family: 'NightingaleScript', cursive;
+  font-size: clamp(24px, 2.5vw, 40px);
+  color: #f3ebe0;
+  text-align: center;
+  line-height: normal;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.location {
   font-family: 'NightingaleScript', cursive;
   font-size: clamp(24px, 2.5vw, 40px);
   color: #f3ebe0;

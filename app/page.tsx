@@ -52,6 +52,7 @@ export default function Home() {
         />
         <h1 className={styles.title}>Emily &amp; Daniel</h1>
         <p className={styles.date}>05 September 2026</p>
+        <p className={styles.location}>Westerlo, NY</p>
       </div>
 
       <nav className={styles.nav}>

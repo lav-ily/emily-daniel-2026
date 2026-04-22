@@ -19,18 +19,7 @@ export default function Home() {
 
   return (
     <main className={styles.home}>
-      <div className={styles.background}>
-        <Image
-          src="/images/flowers-bg.png"
-          alt="Soft blurred flower petals"
-          width={2731}
-          height={4096}
-          priority
-          sizes="100vw"
-          className={styles.bgImage}
-        />
-        <div className={styles.darkOverlay} />
-      </div>
+      <div className={styles.background} role="img" aria-label="Soft blurred flower petals" />
 
       <div className={styles.textureOverlay}>
         <Image

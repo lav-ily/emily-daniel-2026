@@ -12,23 +12,18 @@
   position: absolute;
   inset: -30px;
   filter: blur(5px);
-  overflow: hidden;
-}
-
-.background img {
   pointer-events: none;
 }
 
-.bgImage {
+.background::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 158%;
-  height: 367%;
-  max-width: none;
+  inset: 0;
+  background: url("/images/flowers-bg.png") top left / 158% 367% no-repeat;
 }
 
-.darkOverlay {
+.background::after {
+  content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.2);

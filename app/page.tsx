@@ -21,13 +21,15 @@ export default function Home() {
     <main className={styles.home}>
       <div className={styles.background}>
         <Image
-          src="/images/grass.png"
-          alt="Lush green grass field"
-          fill
+          src="/images/flowers-bg.png"
+          alt="Soft blurred flower petals"
+          width={2731}
+          height={4096}
           priority
           sizes="100vw"
-          style={{ objectFit: "cover" }}
+          className={styles.bgImage}
         />
+        <div className={styles.darkOverlay} />
       </div>
 
       <div className={styles.textureOverlay}>

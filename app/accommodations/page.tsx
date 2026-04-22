@@ -10,6 +10,13 @@ export default function AccommodationsPage() {
       <main className={styles.main}>
         <div className={styles.intro}>
           <h1 className={styles.pageTitle}>Accommodations</h1>
+          <div className={styles.introText}>
+            <p>
+              Please read below for more details on how to get to the Catskills.
+              Our wedding weekend is during Labor Day weekend - please book ahead
+              and plan accordingly!
+            </p>
+          </div>
         </div>
 
         <div className={styles.sections}>

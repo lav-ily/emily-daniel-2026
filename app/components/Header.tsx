@@ -11,8 +11,8 @@ const NAV_ITEMS = [
   { label: "itinerary", href: "/itinerary" },
   { label: "faq", href: "/faq" },
   { label: "gallery", href: "/gallery" },
-  { label: "registry", href: "/registry" },
-] as const;
+  { label: "registry", href: "https://www.zola.com/wedding/emily-daniel-2026/registry", external: true },
+];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,9 +33,15 @@ export default function Header() {
           <ul className={styles.navLinks}>
             {NAV_ITEMS.map((item) => (
               <li key={item.label}>
-                <Link href={item.href} className={styles.navLink}>
-                  {item.label}
-                </Link>
+                {item.external ? (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className={styles.navLink}>
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link href={item.href} className={styles.navLink}>
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -106,13 +112,25 @@ export default function Header() {
             <ul className={styles.mobileMenuLinks}>
               {NAV_ITEMS.map((item) => (
                 <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className={styles.mobileMenuLink}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.mobileMenuLink}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={styles.mobileMenuLink}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

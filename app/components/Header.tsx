@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import MobileMenuOverlay from "@/app/components/MobileMenuOverlay";
+import MenuToggleButton from "@/app/components/MenuToggleButton";
 import styles from "./Header.module.css";
 
 const NAV_ITEMS = [
@@ -19,7 +21,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={`${styles.header} ${menuOpen ? styles.headerMenuOpen : ""}`}>
         <Link href="/" className={styles.logo}>
           <Image
             src="/images/bunnies.png"
@@ -50,19 +52,11 @@ export default function Header() {
           </a>
         </nav>
 
-        <button
+        <MenuToggleButton
+          open={menuOpen}
+          onToggle={() => setMenuOpen((open) => !open)}
           className={styles.hamburger}
-          aria-label="Open menu"
-          onClick={() => setMenuOpen(true)}
-        >
-          <Image
-            src="/images/hamburger-menu.svg"
-            alt=""
-            width={24}
-            height={24}
-            aria-hidden="true"
-          />
-        </button>
+        />
 
         <div className={styles.borderLine}>
           <Image
@@ -74,8 +68,7 @@ export default function Header() {
         </div>
       </header>
 
-      {menuOpen && (
-        <div className={styles.mobileMenu}>
+      <MobileMenuOverlay open={menuOpen} className={styles.mobileMenu}>
           <div className={styles.mobileMenuHeader}>
             <Link href="/" className={styles.mobileMenuLogo}>
               <Image
@@ -85,19 +78,6 @@ export default function Header() {
                 height={50}
               />
             </Link>
-            <button
-              className={styles.closeButton}
-              aria-label="Close menu"
-              onClick={() => setMenuOpen(false)}
-            >
-              <Image
-                src="/images/close-menu.svg"
-                alt=""
-                width={24}
-                height={24}
-                aria-hidden="true"
-              />
-            </button>
             <div className={styles.borderLine}>
               <Image
                 src="/images/line-header.svg"
@@ -144,8 +124,7 @@ export default function Header() {
               rsvp
             </a>
           </nav>
-        </div>
-      )}
+      </MobileMenuOverlay>
     </>
   );
 }

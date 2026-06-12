@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import MobileMenuOverlay from "@/app/components/MobileMenuOverlay";
+import MenuToggleButton from "@/app/components/MenuToggleButton";
 import styles from "./page.module.css";
 
 const NAV_ITEMS = [
@@ -67,23 +69,16 @@ export default function Home() {
             rsvp
           </a>
         </div>
-        <button
-          className={styles.hamburger}
-          aria-label="Open menu"
-          onClick={() => setMenuOpen(true)}
-        >
-          <Image
-            src="/images/hamburger-menu.svg"
-            alt=""
-            width={24}
-            height={24}
-            aria-hidden="true"
+        {!menuOpen && (
+          <MenuToggleButton
+            open={false}
+            onToggle={() => setMenuOpen(true)}
+            className={styles.hamburger}
           />
-        </button>
+        )}
       </nav>
 
-      {menuOpen && (
-        <div className={styles.mobileMenu}>
+      <MobileMenuOverlay open={menuOpen} className={styles.mobileMenu}>
           <div className={styles.mobileMenuHeader}>
             <Link href="/" className={styles.mobileMenuLogo}>
               <Image
@@ -93,19 +88,11 @@ export default function Home() {
                 height={50}
               />
             </Link>
-            <button
+            <MenuToggleButton
+              open
+              onToggle={() => setMenuOpen(false)}
               className={styles.closeButton}
-              aria-label="Close menu"
-              onClick={() => setMenuOpen(false)}
-            >
-              <Image
-                src="/images/close-menu.svg"
-                alt=""
-                width={24}
-                height={24}
-                aria-hidden="true"
-              />
-            </button>
+            />
             <div className={styles.mobileMenuBorder}>
               <Image
                 src="/images/line-header.svg"
@@ -152,8 +139,7 @@ export default function Home() {
               rsvp
             </a>
           </nav>
-        </div>
-      )}
+      </MobileMenuOverlay>
     </main>
   );
 }

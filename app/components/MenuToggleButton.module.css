@@ -1,0 +1,14 @@
+.iconFrame {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.iconMotion {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

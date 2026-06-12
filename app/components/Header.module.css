@@ -228,4 +228,8 @@
     background-color: #fffcf4;
     z-index: 20;
   }
+
+  .headerMenuOpen {
+    z-index: 21;
+  }
 }

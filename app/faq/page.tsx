@@ -65,8 +65,28 @@ export default function FaqPage() {
 
           <AccordionSection title="Is there parking available at the venue?">
             <p>
-              There is parking available at the venue, albeit limited. We
-              recommend carpooling where possible.
+              Parking for the wedding will be available at the below address.
+            </p>
+            <p>
+              <a
+                href="https://share.google/Dus7A63lUp7SymVdi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                933 County Route 401,
+                <br />
+                Westerlo, NY 12193
+              </a>
+            </p>
+            <p>
+              Please arrive there between 4:15 PM and 4:30 PM to catch a
+              shuttle to the venue (~2 minute ride). The ceremony will begin at
+              5 PM.
+            </p>
+            <p>
+              If you are staying at the designated hotel block, a shuttle from
+              the hotel will be available. Pick-up will be at 4:30 PM and
+              drop-off will take place at the end of the reception.
             </p>
           </AccordionSection>
 

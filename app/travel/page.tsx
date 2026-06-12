@@ -35,9 +35,8 @@ export default function TravelPage() {
               <strong>
                 approximately a 3 hour drive from New York City
               </strong>
-              . Parking is available at the wedding venue, albeit limited, so we
-              recommend carpooling where possible. Please leave ample time for
-              travel, as our wedding is taking place on Labor Day weekend.
+              . Please leave ample time for travel, as our wedding is taking
+              place on Labor Day weekend.
             </p>
             <p>
               You can rent a car from the following suggested sites or one of
@@ -73,6 +72,30 @@ export default function TravelPage() {
                 </a>
               </li>
             </ul>
+            <p>
+              Parking for the wedding will be available at the below address.
+            </p>
+            <p>
+              <a
+                href="https://share.google/Dus7A63lUp7SymVdi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                933 County Route 401,
+                <br />
+                Westerlo, NY 12193
+              </a>
+            </p>
+            <p>
+              Please arrive there between 4:15 PM and 4:30 PM to catch a
+              shuttle to the venue (~2 minute ride). The ceremony will begin at
+              5 PM.
+            </p>
+            <p>
+              If you are staying at the designated hotel block, a shuttle from
+              the hotel will be available. Pick-up will be at 4:30 PM and
+              drop-off will take place at the end of the reception.
+            </p>
           </AccordionSection>
 
           <AccordionSection
